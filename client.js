@@ -22,8 +22,8 @@ app.get('/qrInfo/:serviceItemId', async ({params: {serviceItemId}}, res) => {
         `);
     } catch (e) {
         console.error(e);
-        res.sendStatus(404);
-        res.render('404');
+        res.sendStatus(500);
+        res.render('500');
     }
 });
 
