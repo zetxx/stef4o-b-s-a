@@ -4,6 +4,11 @@ const model = require('./model');
 module.exports = {
     resource: model,
     options: {
-        parent
+        parent,
+        properties: {
+            addedOn: {
+                isVisible: false
+            }
+        }
     }
 };

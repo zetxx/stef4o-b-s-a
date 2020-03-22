@@ -13,6 +13,9 @@ module.exports = {
                 components: {
                     list: AdminBro.bundle('./Components/url.jsx')
                 }
+            },
+            addedOn: {
+                isVisible: false
             }
         }
     }

@@ -15,9 +15,9 @@ app.get('/qrInfo/:serviceItemId', async ({params: {serviceItemId}}, res) => {
             res.render('404');
             return;
         }
-        const actionList = (await ActionsTaken.find({serviceItemId})).map(({description}) => description).join('<hr/>');
+        const actionList = (await ActionsTaken.find({serviceItemId})).map(({description, addedOn}) => `${addedOn} - ${description}`).join('<hr/>');
         res.send(`
-            <h1>jfnsjfd</h1><br/>
+            <h1>brand: ${item.resourceItemId.brand}, model: ${item.resourceItemId.model} <sup>[${item.resourceItemId.addedOn}]</sup></h1><br/>
             ${actionList}
         `);
     } catch (e) {

@@ -10,7 +10,10 @@ module.exports = {
             serviceItemId: {
                 isVisible: {list: true, filter: true, show: true, edit: true}
             },
-            description: {type: 'richtext'}
+            description: {type: 'richtext'},
+            addedOn: {
+                isVisible: false
+            }
         }
     }
 };
